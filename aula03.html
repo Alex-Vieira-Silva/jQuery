@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula03 click()</title>
+
+    <script type="text/javascript" src="jquery/jquery-3.5.1.min.js"></script>
+
+    <script tyepe="text/javascript">
+        $(document).ready(function(){
+
+            $("img").fadeOut(0);
+            $("img").fadeIn(6000);
+
+            $("#par1").click(function(){
+                $(this).slideUp();
+            });
+
+            $("#par2").click(function(){
+                $(this).fadeOut(5000, function(){
+                    alert("Cliente excluido com sucesso!");
+                });
+            });
+
+            $("#par3").click(function(){
+                $("par2").fadeIn(5000);
+            });
+     
+            $("h1").click(function(){
+                $(this).slideUp();
+            });
+       
+        });
+    
+    </script>
+</head>
+<body>
+    <p id="par1">Resultado: 10 + 10 = 20</p><br>
+    <p id="par2">Rafael</p><br>
+    <p id="par3">Rafael</p><br>
+    <h1>Exemplo jQuery</h1><br>
+    <img src="imagens/icone.jpg">
+</body>
+</html>
